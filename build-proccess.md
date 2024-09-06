@@ -26,3 +26,4 @@ rollup 插件
   name: 'force-close'
 }
 ```
+类似的问题还有使用高版本node构建vue2的时候卡死：https://github.com/vuejs/vue-loader/issues/1908
