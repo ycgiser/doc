@@ -27,3 +27,6 @@ rollup 插件
 }
 ```
 类似的问题还有使用高版本node构建vue2的时候卡死：https://github.com/vuejs/vue-loader/issues/1908
+
+## Error: error:0308010C:digital envelope routines::unsupported
+启动前设置环境变量 cross-env NODE_OPTIONS=--openssl-legacy-provider 
