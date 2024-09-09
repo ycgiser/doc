@@ -9,7 +9,7 @@ export default defineConfig({
     port: 8871,
     proxy: {
       // 比如本服务的 publicPath 是/chat-page，代理的基本策略可以是：将非/chat-page 开头的 pathname 的请求打到 xxx.test.net 上
-      '^/(?!chat-page)': {
+      '^/(?!chat-mer)': {
         target: 'https://xxx.test.net',
         changeOrigin: true,
         autoRewrite: true,
