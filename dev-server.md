@@ -24,3 +24,23 @@ export default defineConfig({
   }
 })
 ```
+以webpack为例：
+```js
+proxy: {
+    '^/(?!chat-platform)': {
+        target: 'https://xxx.test.net',
+        changeOrigin: true,
+        autoRewrite: true,
+        onProxyReq(proxyReq) {
+            proxyReq.setHeader('Origin', 'https://xxx.test.net');
+        },
+        onProxyRes(proxyRes, req) {
+            proxyRes.headers['Access-Control-Allow-Origin'] = req.headers.origin;
+            proxyRes.headers['Access-Control-Allow-Credentials'] = 'true';
+        },
+        cookieDomainRewrite: {
+            'xxx.test.net': '',
+        },
+    },
+}
+```
