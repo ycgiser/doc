@@ -27,7 +27,7 @@ export default defineConfig({
 以webpack为例：
 ```js
 proxy: {
-    '^/(?!chat-platform)': {
+    '^/(?!chat-pf)': {
         target: 'https://xxx.test.net',
         changeOrigin: true,
         autoRewrite: true,
